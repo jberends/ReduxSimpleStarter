@@ -1,5 +1,12 @@
 # ReduxSimpleStarter
 
+
+## videolink
+https://www.udemy.com/react-redux/learn/v4/t/lecture/4288060?start=0
+
+
+
+## The rest
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
 ### Getting Started
