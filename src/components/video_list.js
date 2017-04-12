@@ -17,7 +17,6 @@ const VideoList = (props) => {
     return (
         <ul className="col-md-4 list-group">
             {videoItems}
-            <p>video's: {props.videos.length}</p>
         </ul>
     );
 };
