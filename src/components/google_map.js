@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const API_KEY = 'AIzaSyCYTa9QyvGdAzFY_J-DLRZaNfn5RtzwN8Y';
+const GOOGLE_API_KEY = 'AIzaSyCYTa9QyvGdAzFY_J-DLRZaNfn5RtzwN8Y';
 
 class GoogleMap extends Component {
 
@@ -9,7 +9,7 @@ class GoogleMap extends Component {
             zoom: 12,
             center: {
                 lat: this.props.lat,
-                lon: this.props.lon
+                lng: this.props.lon
             }
         })
     }
