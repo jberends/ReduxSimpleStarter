@@ -6,10 +6,17 @@ const COUNTRY_CODE = 'nl';
 
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
+
+// generates an action object of type with payload (the request promise)
 export function fetchWeather(city) {
     const url = `${ROOT_URL}&q=${city},${COUNTRY_CODE}`;
     const request = axios.get(url);
 
+    console.log('Request:',request);
+
+
+    // redux-promise ensures that the promise'd request by axios is synchronously resolved
+    // first before dispatching the action to the handlers
     return {
         type: FETCH_WEATHER,
         payload: request
