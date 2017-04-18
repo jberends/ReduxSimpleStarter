@@ -6,7 +6,10 @@ export default class SearchBar extends Component {
 
         this.state = {term: ''};
 
+        // need to rebind becuase the this context is not availabel in the fucntion onInpCh when
+        // passed as a called in the input form jsx
         this.onInputChange = this.onInputChange.bind(this)
+        this.onFormSubmit = this.onFormSubmit.bind(this)
     }
 
     onInputChange(event) {
@@ -15,10 +18,15 @@ export default class SearchBar extends Component {
 
     };
 
+    onFormSubmit(event) {
+        event.preventDefault();
+
+        // We need to go an fetch weatherdate here!
+    }
 
     render() {
         return (
-            <form className="input-group">
+            <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     placeholder="Get a five day forecast in your fav cities"
                     className="form-control"
@@ -26,7 +34,7 @@ export default class SearchBar extends Component {
                     onChange={this.onInputChange}
                 />
                 <span className="input-group-btn">
-                    <button type="submit" className="btn btn-secondary">submit</button>
+                    <button type="submit" className="btn btn-secondary">Submit</button>
                 </span>
             </form>
         );
