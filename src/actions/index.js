@@ -1,10 +1,9 @@
 import axios from 'axios';
+import {FETCH_WEATHER} from "./enums";
 
 const OPENWEATHERMAP_API_KEY = 'd6b1788a6f6e10b9fc0eae45eb3c78c5';
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${OPENWEATHERMAP_API_KEY}`;
 const COUNTRY_CODE = 'nl';
-
-export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 
 // generates an action object of type with payload (the request promise)
