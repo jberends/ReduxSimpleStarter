@@ -5,8 +5,9 @@ const INITIAL_STATE = {all: [], post: null};
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
         case FETCH_POSTS:
-
-
+            // needs to renew the state objects (kinda self)
+            // the data is inside action.payload.data
+            return { ...state, all: action.payload.data };
         default:
             return state;
     }
